@@ -8,15 +8,19 @@ If you'd like to leave a
 
 ## Table of Contents
 
+1. [Typescript](#typescript)
 1. [Config](#config)
 1. [Logging](#logging)
 1. [Functional Core, Imperative Shell](#functional-core,-imperative-shell)
 1. [Directory Structure](#directory-structure)
    - [Barrel Pattern](#barrel-pattern)
 1. [Developer Workflow](#developer-workflow)
-   - [Typescript](#typescript)
    - [Nodemon](#nodemon)
 1. [My Personal Style](#my-personal-style)
+
+## Typescript
+
+todo
 
 ## Config
 
@@ -46,10 +50,6 @@ If you are interested in this pattern, I'd suggest checking out this very well w
 This pattern plays very nice with my peronal style of having lots of small files and pooling the things that should be externaly available to other layers of the application in a single place.
 
 ## Developer Workflow
-
-todo
-
-### Typescript
 
 todo
 
