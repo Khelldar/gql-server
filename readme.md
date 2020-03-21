@@ -4,7 +4,7 @@ I've been making APIs with Node.js for a while now. Things like project structur
 
 My hope is that others may get use out of this example and maybe even provide feedback so that I can also improve.
 
-If you'd like to leave a
+If you'd like to comment on anything or ask questions, feel free to create an new issue.
 
 ## Table of Contents
 
