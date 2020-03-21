@@ -3,11 +3,12 @@
  * read from environment variables and with reasonable
  * default set when safe.
  */
+//TODO: write something decent in this file to build the config object from env vars and error for things without defaults
 export const CONFIG = {
   LOG_LEVEL: process.env.LOG_LEVEL || 'debug',
   PORT: process.env.PORT || '5000',
-  //   DATABASE_URL: process.env.DATABASE_URL,
-  TOKEN_SECRET: process.env.TOKEN_SECRET,
+  DATABASE_URL: process.env.DATABASE_URL || '',
+  TOKEN_SECRET: process.env.TOKEN_SECRET || '',
 };
 
 /**

@@ -47,7 +47,7 @@ The one thing that I do come back to as a guiding principal for directory struct
 
 If you are interested in this pattern, I'd suggest checking out this very well written (and short) guide: [https://basarat.gitbook.io/typescript/main-1/barrel](https://basarat.gitbook.io/typescript/main-1/barrel)
 
-This pattern plays very nice with my peronal style of having lots of small files and pooling the things that should be externaly available to other layers of the application in a single place.
+This pattern plays very nice with my peronal style of having lots of small files and pooling the things that should be externaly available to other layers of the application in a single place. The biggest downside is that you have a rediculous number of files named "index.ts" which can be frustrating when using "find by filename" functionality in text editors / IDEs.
 
 ## Developer Workflow
 

@@ -4,13 +4,15 @@ import * as cookieParser from 'cookie-parser';
 import { logger } from './logger';
 import { CONFIG } from './config';
 import { server } from './GraphQL';
+import { migrate } from './postgres';
 
 /**
- * The entry point is responsible for:
+ * This is the main entry point for our server.
+ *
+ * It is responsible for the following:
  * - run database migrations (if any)
  * - wire up an express server with middleware
  * - bind our express server to a port and listen
- *
  *
  * If you have any other special needs that need to happen at
  * start up (ie. making an API call to some other service) it
@@ -23,6 +25,7 @@ import { server } from './GraphQL';
  * that giving them a people a  simple starting point that they can
  * achor the rest of the code to is important.
  *
+ *
  * NOTE: I'm using an immediately invoked async function here.
  * The only purpose of this is to that I can use "await" here for db migrations.
  * The day that top-level await is supported, this could go away.
@@ -31,7 +34,7 @@ import { server } from './GraphQL';
 (async () => {
   logger.info('starting up!');
 
-  //   await migrate();
+  await migrate();
 
   const app = express();
   app.use(cookieParser());
