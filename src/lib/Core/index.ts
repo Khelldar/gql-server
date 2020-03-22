@@ -32,7 +32,7 @@ export type WrapperFunction<
       ctx: Parameters<C[typeof K]>[0],
       input: Parameters<C[typeof K]>[1]
     ) => OutputsOf<C>;
-  }
+  } = { '': ({}, {}) => Promise<{}> }
 > = (
   ctx: ContextsOf<C>,
   input: InputsOf<C>,
