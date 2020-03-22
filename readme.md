@@ -18,6 +18,8 @@ If you'd like to comment on anything or ask questions, feel free to create an ne
    - [Nodemon](#nodemon)
 1. [My Personal Style](#my-personal-style)
 1. [Databases](#databases)
+1. [GraphQL](#graphql)
+   - [Code Generation](#code-generation)
 
 ## Typescript
 
@@ -73,3 +75,9 @@ todo
 ### Migrations on Startup
 
 todo
+
+## GraphQL
+
+todo
+
+### Code Generation
