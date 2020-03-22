@@ -24,19 +24,12 @@ If you'd like to comment on anything or ask questions, feel free to create an ne
 
 ## Typescript
 
-todo
-
 ## Config
-
-todo
 
 ## Logging
 
-todo
-
 ## Functional Core, Imperative Shell
 
-todo
 https://www.destroyallsoftware.com/screencasts/catalog/functional-core-imperative-shell
 
 ## Directory Structure
@@ -55,34 +48,20 @@ This pattern plays very nice with my peronal style of having lots of small files
 
 ## Developer Workflow
 
-todo
-
 ### Nodemon
-
-todo
 
 ## My Personal Style
 
-todo
-
 ## Databases
-
-todo
 
 ### Postgres
 
-todo
-
 ### Migrations on Startup
 
-todo
-
 ## GraphQL
-
-todo
 
 ### Code Generation
 
 ## Context
 
-todo
+## Authentication
