@@ -5,6 +5,7 @@ import { typeDefs } from './typeDefs';
 
 export const server = new ApolloServer({
   typeDefs,
+  //@ts-ignore - generated types and apollo-server-express types slightly out of sync
   resolvers,
   context,
   introspection: true,

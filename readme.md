@@ -1,6 +1,6 @@
 # GQL Server
 
-I've been making APIs with Node.js for a while now. Things like project structure, common packages, and programming patterns are an always evolving thing for me, but I've been particularly happy with this one. I'm sure a year from now I'll be doing things a bit differently, but I wanted to take this time to create a time-capsule.
+Project structure, packages, and programming patterns are an always evolving thing for me, but I've been particularly happy with this one. I'm sure a year from now I'll be doing things a bit differently, but I wanted to take this time to create a time-capsule.
 
 My hope is that others may get use out of this example and maybe even provide feedback so that I can also improve.
 
@@ -20,6 +20,7 @@ If you'd like to comment on anything or ask questions, feel free to create an ne
 1. [Databases](#databases)
 1. [GraphQL](#graphql)
    - [Code Generation](#code-generation)
+1. [Context](#context)
 
 ## Typescript
 
@@ -81,3 +82,7 @@ todo
 todo
 
 ### Code Generation
+
+## Context
+
+todo

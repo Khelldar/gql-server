@@ -1,3 +1,26 @@
 type Mutation {
-  upsertSomething: String
+  upsertUser(input: UpsertUserInput): UpsertUserOutput!
+}
+input UpsertUserInput {
+  id: String
+  email: String
+  password: String
+}
+type UpsertUserOutput {
+  user: User!
+}
+
+extend type Mutation {
+  login(input: LoginInput!): LoginOutput!
+}
+input LoginInput {
+  email: String!
+  password: String!
+}
+type LoginOutput {
+  user: User
+}
+
+extend type Mutation {
+  logout: Boolean
 }

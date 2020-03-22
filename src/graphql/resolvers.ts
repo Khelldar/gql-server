@@ -1,15 +1,39 @@
 import { Resolvers } from './generated/resolvers';
-import { GraphqlContext } from './context';
+import { Context } from './context';
 
-export const resolvers: Resolvers<GraphqlContext> = {
+export const resolvers: Resolvers<Context> = {
   Query: {
-    test: async () => {
-      return 'hi there';
+    test: async (_, __, ctx) => {
+      if (ctx.token === 'asdf') {
+        return 'you are logged in';
+      }
+      return 'you are not logged in';
     },
   },
   Mutation: {
-    upsertSomething: async (_, args, ctx) => {
-      return 'sup';
+    upsertUser: async (_, args, ctx) => {
+      return {
+        user: {
+          id: '123',
+          email: 'test@fake.com',
+        },
+      };
+    },
+    login: async (_, args, ctx) => {
+      if (args.input.password === 'boggle') {
+        ctx.login('asdf');
+      }
+
+      return {
+        user: {
+          id: '123',
+          email: 'test@fake.com',
+        },
+      };
+    },
+    logout: (_, __, ctx) => {
+      ctx.logout();
+      return true;
     },
   },
 };
