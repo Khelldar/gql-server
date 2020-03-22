@@ -9,8 +9,8 @@ export interface ListUsersFilters {
   emails?: string[];
 }
 
-export interface Output {
-  users: User[];
+export interface Dependencies {
+  users: [];
 }
 
 export const listUsers: CoreFunction<Context, Input, Output> = async (ctx, input) => {
@@ -18,3 +18,7 @@ export const listUsers: CoreFunction<Context, Input, Output> = async (ctx, input
     users: [],
   };
 };
+
+// export async function listUsers(ctx: Context, input: Input, deps: Dependencies) {
+//   return [];
+// }

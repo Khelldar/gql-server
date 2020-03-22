@@ -1,7 +1,7 @@
 import { listUsers } from './listUsers';
 import { upsertUser } from './upsertUser';
 import { validateUserCredentials } from './validateUserCredentials';
-import { wrapWith, WrapperFunction } from '../../lib/Core';
+import { wrapWith } from '../../lib/Core';
 import { logger } from '../../logger';
 
 const core = {
@@ -9,10 +9,14 @@ const core = {
   upsertUser,
   validateUserCredentials,
 };
+export interface LoggingWrapperOptions {
+  prefix?: string;
+}
+export function newLoggingWrapper({ prefix = '' }: LoggingWrapperOptions = {}) {
+  return (ctx, input, next, { coreFunctionName }) => {
+    logger.debug({ input }, `${prefix} ${coreFunctionName} invoked`);
+    return next(ctx, input);
+  };
+}
 
-const loggingWrapper: WrapperFunction = (ctx, input, next, { coreFunctionName }) => {
-  logger.debug({ input }, ``);
-  return next(ctx, input);
-};
-
-export const userService = wrapWith(core, loggingWrapper);
+export const userService = wrapWith(core, newLoggingWrapper({ prefix: 'user service' }));
