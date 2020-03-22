@@ -52,6 +52,10 @@ This pattern plays very nice with my peronal style of having lots of small files
 
 ## My Personal Style
 
+### No Classes
+
+### Small Files
+
 ## Databases
 
 ### Postgres
